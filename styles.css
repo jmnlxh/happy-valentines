@@ -141,7 +141,7 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -50%); /* Center the popup */
     height: auto;
     width: 70%;
     max-width: 700px;
@@ -270,5 +270,12 @@ body {
 
     .button:hover {
         transform: scale(1.8);
+    }
+
+@media (max-width: 768px) {
+        .popup-card {
+            width: 90%;
+            max-width: none;
+        }
     }
 }
