@@ -1,18 +1,18 @@
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #f3dfde
+    background-color: #f3dfde;
 }
 
 #heart-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
+    z-index: 1;
 }
+
 
 .heart {
     position: absolute;
@@ -96,18 +96,35 @@ body {
 }
 
 #header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    position: relative;
-    width: 100%;
+    padding: 10px;
+    background-color: rgba(243, 223, 222, 0.8);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
 }
 
 .header-text {
     font-size: 2.5em;
     color: #fc5477;
+    margin-left: 10px;
     margin: 0;
-    padding-right: -10px; /* Apply negative right padding */
-    transform: translateX(150px); /* Adjust position to compensate for negative padding */
+    position: relative;
+    z-index: 11;
+}
+
+.flowers {
+    transform: scale(0.5);
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
 }
