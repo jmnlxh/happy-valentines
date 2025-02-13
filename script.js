@@ -67,3 +67,29 @@ function spawnHearts() {
 
 spawnHearts();
 
+const button = document.querySelector('.button');
+const popupCard = document.getElementById('popup-card');
+const closePopup = document.getElementById('close-popup');
+const overlay = document.getElementById('overlay');
+
+button.addEventListener('click', (event) => {
+    event.preventDefault();
+    overlay.classList.remove('hidden'); 
+    popupCard.classList.remove('hidden');
+});
+
+closePopup.addEventListener('click', () => {
+    overlay.classList.add('hidden');
+    popupCard.classList.add('hidden'); 
+});
+
+button.addEventListener('click', (event) => {
+    event.preventDefault();
+    overlay.classList.add('show'); 
+    popupCard.classList.add('show');
+});
+
+closePopup.addEventListener('click', () => {
+    overlay.classList.remove('show');
+    popupCard.classList.remove('show'); 
+});
