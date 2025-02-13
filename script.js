@@ -19,10 +19,12 @@ function createHeart() {
     heart.onclick = () => {
         createFireworks(x, y);
         heart.remove();
+        heartCount--;
     };
 
     setTimeout(() => {
         heart.remove();
+        heartCount--;
     }, 3000);
 }
 
@@ -97,3 +99,15 @@ closePopup.addEventListener('click', () => {
 const popupHeart = document.querySelector('.popup-heart');
 popupHeart.style.setProperty('--heart-size', '80px');
 popupHeart.style.setProperty('--heart-rotation', '-90deg');
+
+function centerPopup() {
+    const popupCard = document.getElementById('popup-card');
+    if (popupCard && !popupCard.classList.contains('hidden')) {
+        popupCard.style.top = '50%';
+        popupCard.style.left = '50%';
+        popupCard.style.transform = 'translate(-50%, -50%)';
+    }
+}
+
+window.addEventListener('resize', centerPopup);
+window.addEventListener('orientationchange', centerPopup);
