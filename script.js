@@ -48,7 +48,7 @@ function createFireworks(x, y) {
 
         setTimeout(() => {
             smallHeart.style.transition = 'transform 1s ease, opacity 1s ease';
-            smallHeart.style.transform = `translate(${offsetX}px, ${offsetY}px)`; 
+            smallHeart.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
         }, 10);
 
         setTimeout(() => {
@@ -74,22 +74,22 @@ const overlay = document.getElementById('overlay');
 
 button.addEventListener('click', (event) => {
     event.preventDefault();
-    overlay.classList.remove('hidden'); 
+    overlay.classList.remove('hidden');
     popupCard.classList.remove('hidden');
 });
 
 closePopup.addEventListener('click', () => {
     overlay.classList.add('hidden');
-    popupCard.classList.add('hidden'); 
+    popupCard.classList.add('hidden');
 });
 
 button.addEventListener('click', (event) => {
     event.preventDefault();
-    overlay.classList.add('show'); 
+    overlay.classList.add('show');
     popupCard.classList.add('show');
 });
 
 closePopup.addEventListener('click', () => {
     overlay.classList.remove('show');
-    popupCard.classList.remove('show'); 
+    popupCard.classList.remove('show');
 });
