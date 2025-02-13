@@ -62,7 +62,7 @@ function createFireworks(x, y) {
 
 function spawnHearts() {
     createHeart();
-    setTimeout(spawnHearts, 220);
+    setTimeout(spawnHearts, 500);
 }
 
 spawnHearts();
