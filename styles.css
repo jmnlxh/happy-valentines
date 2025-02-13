@@ -85,13 +85,13 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 2px;
     flex-direction: column;
 }
 
 .header-text {
     font-size: 3em;
-    color: #fc5477;
+    color: #bb2258;
     margin: 0;
     position: relative;
     z-index: 11;
@@ -122,16 +122,18 @@ body {
 
 .button {
     border: 0;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: #e91f64;
     color: #f2f3f4;
     transform: scale(2);
     transition: ease-out 0.5s;
     padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .button:hover {
-    transform: scale(2.5);
+    transform: scale(2.2);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     transition: ease-in 0.5s;
 }
 
@@ -141,10 +143,10 @@ body {
     left: 50%;
     transform: translate(-50%, -60%);
     height: auto;
-    width: 90%;
+    width: 70%;
     max-width: 700px;
     padding: 20px;
-    background-color: white;
+    background-color: #f2f3f4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 100;
     border-radius: 8px;
@@ -154,12 +156,43 @@ body {
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
     opacity: 0;
     visibility: hidden;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 24px,
+        #ddd 24px,
+        #ddd 25px
+    );
+    background-size: 100% 25px;
+    line-height: 25px;
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+
+.popup-card p {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    background-color: #f2f3f4;
+    padding-right: 10px;
 }
 
 .popup-card.show {
     opacity: 1;
     transform: translate(-50%, -50%);
     visibility: visible;
+}
+
+.popup-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    z-index: 0;
 }
 
 .overlay {
@@ -181,6 +214,49 @@ body {
 .overlay.show {
     opacity: 1;
     visibility: visible;
+}
+
+.button-popup {
+    border-radius: 4px;
+    border: 0;
+    background-color: #fa5376;
+    color: #f2f3f4;
+}
+
+.message {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup-heart {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    width: var(--heart-size, 30px);
+    height: var(--heart-size, 30px);
+    background-color: #fc5477;
+    transform: rotate(var(--heart-rotation, -45deg));
+    opacity: 0.8;
+    z-index: 2; 
+}
+
+.popup-heart::before,
+.popup-heart::after {
+    content: '';
+    position: absolute;
+    width: var(--heart-size, 30px);
+    height: var(--heart-size, 30px);
+    background-color: #fc5477;
+    border-radius: 50%;
+}
+
+.popup-heart::before {
+    top: calc(var(--heart-size, 30px) / -2);
+    left: 0;
+}
+
+.popup-heart::after {
+    left: calc(var(--heart-size, 30px) / 2);
+    top: 0;
 }
 
 @media (max-width: 768px) {

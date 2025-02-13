@@ -27,8 +27,8 @@ function createHeart() {
 }
 
 function createFireworks(x, y) {
-    const numberOfHearts = 13;
-    const scatterDistance = 110;
+    const numberOfHearts = 11;
+    const scatterDistance = 120;
 
     for (let i = 0; i < numberOfHearts; i++) {
         const smallHeart = document.createElement('div');
@@ -93,3 +93,7 @@ closePopup.addEventListener('click', () => {
     overlay.classList.remove('show');
     popupCard.classList.remove('show');
 });
+
+const popupHeart = document.querySelector('.popup-heart');
+popupHeart.style.setProperty('--heart-size', '80px');
+popupHeart.style.setProperty('--heart-rotation', '-90deg');
