@@ -27,7 +27,7 @@ function createHeart() {
 }
 
 function createFireworks(x, y) {
-    const numberOfHearts = 19;
+    const numberOfHearts = 13;
     const scatterDistance = 110;
 
     for (let i = 0; i < numberOfHearts; i++) {
