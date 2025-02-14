@@ -102,7 +102,7 @@ body {
 }
 
 .header-text {
-    font-size: 3em;
+    font-size: 3.3em;
     color: #bb2258;
     margin: 0;
     position: relative;
@@ -111,7 +111,7 @@ body {
 }
 
 .flowers {
-    transform: scale(0.5);
+    transform: scale(0.7);
     position: relative;
     z-index: 11;
     margin-right: 0;
@@ -133,7 +133,7 @@ body {
 }
 
 .button {
-    border: 0;
+    border: solid #8f0921;
     border-radius: 8px;
     background-color: #e91f64;
     color: #f2f3f4;
@@ -186,7 +186,7 @@ body {
     padding: 0;
     position: relative;
     z-index: 1;
-    background-color: #f2f3f4;
+    background-color: transparent;
     padding-right: 10px;
 }
 
@@ -265,6 +265,29 @@ body {
 .popup-heart::after {
     left: calc(var(--heart-size, 30px) / 2);
     top: 0;
+}
+
+.shortmssg {
+    font-size: 1.8em;
+    color: black;
+    margin: 0;
+    position: relative;
+    z-index: 11;
+    text-align: center;
+}
+
+.link {
+    color: black;
+    text-decoration: underline;
+}
+
+.textmssg {
+    font-size: 1em;
+    color: black;
+    margin: 2px;
+    position: relative;
+    z-index: 11;
+    text-align: justify;
 }
 
 @media (max-width: 768px) {

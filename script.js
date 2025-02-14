@@ -97,7 +97,7 @@ closePopup.addEventListener('click', () => {
 });
 
 const popupHeart = document.querySelector('.popup-heart');
-popupHeart.style.setProperty('--heart-size', '80px');
+popupHeart.style.setProperty('--heart-size', '55px');
 popupHeart.style.setProperty('--heart-rotation', '-90deg');
 
 function centerPopup() {
