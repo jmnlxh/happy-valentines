@@ -234,6 +234,7 @@ body {
     border: 0;
     background-color: #fa5376;
     color: #f2f3f4;
+    transform: scale(1.5);
 }
 
 .popup-heart {
